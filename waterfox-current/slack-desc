@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+               |-----handy-ruler------------------------------------------------------|
+waterfox-current: waterfox-current (Waterfox Web browser)
+waterfox-current:
+waterfox-current: Waterfox focuses on giving users choice. The browser is focused on 
+waterfox-current: power users, which lets you make the important decisions. There is 
+waterfox-current: no plugin whitelist (meaning you can run Java Applets and 
+waterfox-current: Silverlight apps), you can run whichever extensions you like 
+waterfox-current: (including bootstrapped add-ons that can completely change 
+waterfox-current: functionality of the browser) and absolutely no data or telemetry 
+waterfox-current: is sent back to Mozilla or the Waterfox project.
+waterfox-current:
+waterfox-current: 

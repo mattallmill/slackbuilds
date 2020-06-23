@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=waterfox %u
+Icon=/usr/share/pixmaps/waterfox.png
+Type=Application
+Categories=Application;Network;
+Name=Waterfox
+MimeType=text/html
+X-KDE-StartupNotify=true
