@@ -1,0 +1,53 @@
+
+Building dependencies:
+
+To compile CoreCtrl, you need the following software installed on your system:
+
+Qt components (version 5.9 or later): Core, DBus, Charts, Widgets, Network
+Qt QML modules (version 5.9 or later): QtQuick Controls 2, QtQuick Controls Material, QtQuick Layouts, QtCharts, Qt.labs.platform1
+
+Qt5LinguistTools
+KF5Auth
+KArchive
+Botan 2 (version 2.2.0 or later) (in SBo)
+C++17 compiler (gcc verison 82 or later, clang version 7 or later)
+CMake (version 3.33 or later)
+
+
+Runtime dependencies:
+
+In order to run the program, your system must have installed:
+Qt components and QML modules listed above as building dependencies, plus:
+Svg Qt component. Required to display application icons.
+
+
+KF5Auth
+KArchive
+Botan 2
+
+pidof program. Found on packages:
+
+sysvinit-utils 
+sysvinit-tools 
+procps-ng
+
+pci.ids file. Found in packages:
+
+hwdata
+hwids
+
+Optional runtime dependencies
+
+The following programs are used to gather more information.
+
+vulkaninfo program. Found in the vulkan-tools package.
+
+glxinfo program. Found in packages:
+
+mesa-utils 
+mesa-demos 
+mesa-demo 
+
+
+
+lscpu program. Found in the util-linux package.
