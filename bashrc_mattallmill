@@ -1,0 +1,57 @@
+PS1='\[\e[0;32m\]\u@\H[\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;32m\]]\$ '
+
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+
+alias ls='ls $LS_OPTIONS'
+alias pico='nano'
+alias cls=clear
+alias dir=ls
+alias lk='ls -lha'
+alias rpm2txz='rpm2txz -c -S -n -d'
+alias cpu='ps -eo pcpu,pid,user,args | sort -k1 -r | head -10'
+alias end='cd && cls && fortune'
+alias flush='sync; echo 3 > /proc/sys/vm/drop_caches'
+alias timesync='sudo ntpdate -b 192.168.0.21'
+alias ytdlmp3='youtube-dl --extract-audio --audio-format mp3 '
+alias md=mkdir
+alias update='sudo slackpkg update && sudo slackpkg upgrade-all && sudo slackpkg install-new'
+alias source='cd ~/Downloads/SlackBuilds/personal/kernel-source'
+alias huge='cd ~/Downloads/SlackBuilds/personal/kernel-huge'
+alias modules='cd ~/Downloads/SlackBuilds/personal/kernel-modules'
+alias compat32_refresh='lftp -c mirror http://bear.alienbase.nl/mirrors/people/alien/multilib/current/slackware64-compat32/'
+alias kde_refresh='lftp -c mirror https://slackware.nl/alien-kde/current/latest/x86_64/'
+
+
+export PATH=$PATH::/sbin/::/usr/sbin/::/usr/bin/32/
+#export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/lib64/ffmpeg4/pkgconfig
+export CC=gcc
+export CXX=gcc-9.1.0
+
+function extract()      # Handy Extract Program
+{
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar*)   	 tar xvf $1      ;;
+            *.bz2)       bunzip2 $1      ;;
+            *.rar)       unrar x $1      ;;
+            *.gz)        gunzip $1       ;;
+            *.tbz2)      tar xvjf $1     ;;
+            *.tgz)       tar xvzf $1     ;;
+            *.zip)       unzip $1        ;;
+            *.Z)         uncompress $1   ;;
+            *.7z)        7z x $1         ;;
+            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
+
+# Creates an archive (*.tar.gz) from given directory.
+function create_tar() { tar cvzf "${1%%/}.tar.xz"  "${1%%/}/"; }
+
+# Create a ZIP archive of a file or folder.
+function create_zip() { zip -r "${1%%/}.zip" "$1" ; }
+
+/usr/games/fortune
